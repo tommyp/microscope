@@ -1,0 +1,1 @@
+Template.postsList.helpers({  posts: function() {    return Posts.find();  },  domain: function() {    var a = doucment.createElement('a');    a.href = this.url;    return a.hostname;  }});
