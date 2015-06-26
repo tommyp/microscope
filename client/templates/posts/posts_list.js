@@ -1,1 +1,1 @@
-Template.postsList.helpers({  posts: function() {    return Posts.find();  },  domain: function() {    var a = doucment.createElement('a');    a.href = this.url;    return a.hostname;  }});
+Template.postsList.helpers({  posts: function() {    return Posts.find();  },  domain: function() {    var a = doucment.createElement('a');    a.href = this.url;    return a.hostname;  }});Meteor.startup(function() { Tracker.autorun(function() {  console.log('There are ' + Posts.find().count() + ' posts'); });});
